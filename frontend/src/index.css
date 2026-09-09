@@ -1,0 +1,129 @@
+/* ==========================================================================
+   Tokens globales del homenaje. Ningún componente hardcodea color/espaciado.
+   ========================================================================== */
+:root {
+  /* Paleta */
+  --c-cream: #fbf6ee;
+  --c-cream-deep: #f3e9d8;
+  --c-ink: #2c2620;
+  --c-ink-soft: #5b5348;
+  --c-green: #2f7d57;
+  --c-green-deep: #1f5a3d;
+  --c-coral: #e2704a;
+  --c-gold: #e0ac4c;
+  --c-sky: #7fb9dd;
+  --c-white: #ffffff;
+
+  /* Roles */
+  --bg: var(--c-cream);
+  --bg-alt: var(--c-cream-deep);
+  --surface: var(--c-white);
+  --text: var(--c-ink);
+  --text-soft: var(--c-ink-soft);
+  --brand: var(--c-green);
+  --brand-strong: var(--c-green-deep);
+  --accent: var(--c-coral);
+
+  /* Tipografía */
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
+
+  /* Espaciado */
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  /* Layout */
+  --measure: 42rem;
+  --wide: 72rem;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --shadow-soft: 0 18px 40px -24px rgba(44, 38, 32, 0.45);
+  --shadow-card: 0 10px 30px -18px rgba(44, 38, 32, 0.4);
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 220ms;
+
+  color-scheme: light;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1rem + 0.25vw, 18px);
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--text);
+  margin: 0;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--brand-strong);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

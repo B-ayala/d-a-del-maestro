@@ -1,0 +1,20 @@
+{
+  "plantel-docente": {
+    "widths": [
+      480,
+      960,
+      1280
+    ],
+    "aspectRatio": 1.3333,
+    "placeholder": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAADwBACdASoYABIAPu1ur1IppiQiqAgBMB2JZQDImYzGcNMSvW+oWx1dxIHlhKye4AAA99uiS/f0mv9YbAZHyHkT8tVpYTD2AculyiMhEJ7ODfT4mDntNB4WnoIFb0+d0w1M2ZQiXABPZGCVSJkuf+1Ni53DEI9MSfIk8rMYgsn467QEQktc5eWSziaopSMAz7vaEz7vr5YAPjmhbS0W9WPytA0qFiZ7R6pPIb4pj23ysqhwAAA="
+  },
+  "juan": {
+    "widths": [
+      480,
+      960,
+      1280
+    ],
+    "aspectRatio": 0.8005,
+    "placeholder": "data:image/webp;base64,UklGRh4BAABXRUJQVlA4IBIBAADQBgCdASoTABgAPu1urlIppiQiqAgBMB2JbACdMoR+MKtsK+W7Nc9ALZeOcu1dSkFiMKtNxYh492QLz7v4noAA/sm2DhZwZTmSI6bZKRq3WlU11RKRVgmnRQKPVCV0siGQUs9I/n1vNjoJP9GS4Otr7gmc2QG4Jj6FNIxLkME0XoioXrkAj3gLcMgZIneKpPzp+fMIPJfhp97w1W3BD8T7O49PEH5S34H+OyOxwEUOOvq6C1hbnU6ZlvRaY9k8fTECYAyDP0ePGDtVIg7FsTCnGgBg/vdj/3v35AU4nxjvE+Bw24G1v8E29F2m5pW+XP+TbHa1zfIdWCpofgvNmlZTnTaV2UtvBOvHxQHaKDxRgAAA"
+  }
+}

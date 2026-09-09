@@ -1,0 +1,71 @@
+.wrap {
+  background:
+    radial-gradient(circle at 50% 0%, #1c3a2a 0%, #122437 55%, #0f2033 100%);
+  color: #fff;
+  padding: var(--space-2xl) var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2xl);
+}
+
+.panel {
+  width: min(92vw, 40rem);
+  text-align: center;
+}
+
+.kicker {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 1rem + 3vw, 2.2rem);
+  color: var(--c-gold);
+  margin-bottom: var(--space-sm);
+}
+
+.line {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1rem + 2vw, 1.7rem);
+  line-height: 1.5;
+  margin-top: var(--space-sm);
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.feature .line {
+  font-style: italic;
+  font-size: clamp(1.5rem, 1rem + 4vw, 2.4rem);
+}
+
+.photo {
+  margin: var(--space-lg) auto 0;
+  max-width: 22rem;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  border: 6px solid #fffaf0;
+  box-shadow: var(--shadow-soft);
+  transform: rotate(-2deg);
+}
+
+.names {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-lg) 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xs) var(--space-md);
+  font-size: 1.05rem;
+}
+
+.teachers {
+  margin-top: var(--space-lg);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.teachers strong {
+  color: var(--c-gold);
+  font-size: 1.25rem;
+}

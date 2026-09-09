@@ -1,0 +1,56 @@
+.button {
+  position: fixed;
+  right: clamp(0.9rem, 3vw, 1.75rem);
+  bottom: clamp(0.9rem, 3vw, 1.75rem);
+  z-index: 50;
+
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+
+  color: #fff;
+  background: var(--brand);
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(14px) scale(0.85);
+  pointer-events: none;
+  transition:
+    opacity 260ms var(--ease),
+    transform 260ms var(--ease),
+    background 160ms var(--ease);
+}
+
+.visible {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.button:hover {
+  background: var(--brand-strong);
+}
+
+.button:active {
+  transform: scale(0.92);
+}
+
+.icon {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: opacity 160ms linear;
+    transform: none;
+  }
+  .visible {
+    transform: none;
+  }
+}

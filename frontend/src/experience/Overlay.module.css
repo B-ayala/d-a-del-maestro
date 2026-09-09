@@ -1,0 +1,126 @@
+.layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.beat {
+  position: absolute;
+  left: 50%;
+  bottom: 12svh;
+  width: min(92vw, 44rem);
+  transform: translate(-50%, 18px);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 600ms var(--ease), transform 600ms var(--ease);
+  color: #fff;
+  text-shadow: 0 2px 24px rgba(6, 18, 12, 0.7), 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.beat.active {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.feature {
+  bottom: auto;
+  top: 50%;
+  transform: translate(-50%, calc(-50% + 18px));
+}
+
+.feature.active {
+  transform: translate(-50%, -50%);
+}
+
+.kicker {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 1rem + 3vw, 2.4rem);
+  font-weight: 600;
+  color: var(--c-gold);
+  margin-bottom: var(--space-2xs);
+  letter-spacing: 0.01em;
+}
+
+.line {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 0.9rem + 2.4vw, 1.9rem);
+  line-height: 1.4;
+  margin-top: var(--space-2xs);
+}
+
+.feature .line {
+  font-size: clamp(1.5rem, 1rem + 4.5vw, 3rem);
+  font-style: italic;
+}
+
+.hint {
+  position: absolute;
+  left: 50%;
+  bottom: var(--space-md);
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  opacity: 0;
+  transition: opacity 500ms var(--ease);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hint.active {
+  opacity: 1;
+}
+
+.arrow {
+  width: 1px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.7);
+  animation: hintPulse 2.2s ease-in-out infinite;
+}
+
+.progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  transform-origin: left;
+  background: linear-gradient(90deg, var(--c-green), var(--c-gold));
+}
+
+@keyframes hintPulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scaleY(0.6);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .beat {
+    transition: opacity 200ms linear;
+    transform: translate(-50%, 0);
+  }
+  .feature {
+    transform: translate(-50%, -50%);
+  }
+  .arrow {
+    animation: none;
+  }
+}

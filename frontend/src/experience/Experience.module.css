@@ -1,0 +1,39 @@
+.section {
+  position: relative;
+  background: #0f2033;
+}
+
+.pin {
+  position: relative;
+  height: 100svh;
+  width: 100%;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 18%, #1c3a2a 0%, #122437 55%, #0f2033 100%);
+}
+
+.pin canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  touch-action: pan-y;
+}
+
+.poster,
+.boot {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 20%, #1c3a2a 0%, #122437 55%, #0f2033 100%);
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.boot {
+  height: 100svh;
+  position: relative;
+}
