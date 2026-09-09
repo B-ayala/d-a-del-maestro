@@ -39,8 +39,17 @@ Esperado: sin scroll horizontal en ninguna sección; el título del hero no se
           corta; el canvas 3D nunca genera overflow lateral.
 Resultado: no probado (device real).
 
-ID: TC-003 — DEPRECATED
-Caso: Galería de tarjetas (eliminada; reemplazada por el recorrido 3D).
+ID: TC-003
+Caso: Cierre — grilla de tarjetas (componente Cards)
+Tipo: happy / edge
+Pasos:
+  1. Scrollear hasta el final, arriba del pie.
+Esperado: 1 columna (<560px), 2 (<900px), 3 (>=900px); 8 tarjetas con la foto de
+          Juanchi (proporción 4:5), placeholder borroso → imagen nítida (lazy);
+          encabezado "Instituto Armonía" + "Hecho con cariño para nuestras seños
+          y profes · 11 de septiembre de 2026"; aparición escalonada al entrar en
+          viewport (sin animación si reduced-motion).
+Resultado: no probado (device real).
 
 ID: TC-004
 Caso: Foto individual dentro del mundo 3D

@@ -6,6 +6,11 @@ export const site = {
   date: '11 de septiembre de 2026',
 } as const;
 
+export const closing = {
+  title: site.institute,
+  line: `Hecho con cariño para nuestras seños y profes · ${site.date}`,
+} as const;
+
 export const hero = {
   eyebrow: 'Instituto Armonía',
   title: 'Feliz Día\ndel Maestro',

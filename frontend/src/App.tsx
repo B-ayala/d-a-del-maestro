@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Hero } from './components/Hero';
+import { Cards } from './components/Cards';
 import { SiteFooter } from './components/SiteFooter';
 import { BackToTop } from './components/BackToTop';
 
@@ -18,6 +19,7 @@ function App() {
           <Experience />
         </Suspense>
       </main>
+      <Cards />
       <SiteFooter />
       <BackToTop />
     </>

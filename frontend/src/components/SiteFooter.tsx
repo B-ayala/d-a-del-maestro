@@ -5,9 +5,7 @@ export function SiteFooter() {
   return (
     <footer className={styles.footer}>
       <p className={styles.name}>{site.institute}</p>
-      <p className={styles.line}>
-        Hecho con cariño para nuestras seños y profes · {site.date}
-      </p>
+      <p className={styles.line}>¡Feliz Día del Maestro! · {site.date}</p>
     </footer>
   );
 }

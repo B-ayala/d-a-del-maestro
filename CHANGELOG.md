@@ -24,6 +24,9 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y 
   raíces): sin pedidos de red, compatibles con la CSP.
 - Bloque `.sr-only` con la narrativa y todos los nombres para lectores de
   pantalla; `<noscript>` con el mensaje esencial.
+- Cierre `Cards`: grilla de tarjetas (foto de Juanchi repetida, blur-up + lazy)
+  arriba del pie, con "Instituto Armonía · Hecho con cariño para nuestras seños y
+  profes · 11 de septiembre de 2026".
 - Landing "Feliz Día del Maestro · Instituto Armonía": homenaje visual de una sola
   página (hero, mensaje, tarjetas de agradecimiento, galería, frase y cierre).
 - Pipeline de optimización de imágenes (`npm run images`): genera WebP responsive
