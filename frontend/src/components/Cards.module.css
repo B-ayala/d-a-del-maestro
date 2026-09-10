@@ -63,8 +63,8 @@
   background-size: cover;
   background-position: center;
   box-shadow: var(--shadow-card);
-  /* Aumentar la altura de las tarjetas */
-  height: clamp(420px, 48vh, 560px);
+  /* Aumentar la altura de las tarjetas (un poco más) */
+  height: clamp(560px, 60vh, 720px);
   width: 100%;
 }
 
