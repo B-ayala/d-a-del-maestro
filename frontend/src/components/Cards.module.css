@@ -18,7 +18,8 @@
 
 .grid {
   margin: var(--space-lg) auto 0;
-  max-width: var(--wide);
+  /* Hacer el grid un poco más ancho para que las cards crezcan */
+  max-width: calc(var(--wide) + 12rem);
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-md);
@@ -62,7 +63,9 @@
   background-size: cover;
   background-position: center;
   box-shadow: var(--shadow-card);
-  aspect-ratio: 4 / 5;
+  /* Aumentar la altura de las tarjetas */
+  height: clamp(420px, 48vh, 560px);
+  width: 100%;
 }
 
 /* Aumentar brillo y saturación de las fotos + animación al pasar el cursor */
