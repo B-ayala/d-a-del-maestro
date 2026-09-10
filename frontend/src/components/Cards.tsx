@@ -3,7 +3,11 @@ import { closing } from '../data/content';
 import styles from './Cards.module.css';
 
 // Cargar todas las imágenes de `src/assets/juanchi` (renombradas a foto-1..)
-const imagesMap = import.meta.glob('../assets/juanchi/*.{jpeg,jpg,png,webp,svg}', { eager: true, as: 'url' }) as Record<string, string>;
+const imagesMap = import.meta.glob('../assets/juanchi/*.{jpeg,jpg,png,webp,svg}', {
+  eager: true,
+  query: '?url',
+  import: 'default',
+}) as Record<string, string>;
 const JUANCHI_IMAGES = Object.entries(imagesMap)
   .map(([p, url]) => ({ path: p, url }))
   .sort((a, b) => {
