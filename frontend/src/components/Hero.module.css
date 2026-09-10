@@ -33,13 +33,9 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background:
-    linear-gradient(
-      to top,
-      rgba(20, 40, 30, 0.92) 0%,
-      rgba(24, 46, 34, 0.6) 45%,
-      rgba(28, 52, 39, 0.4) 100%
-    );
+  /* Temporal: desactivar overlay para comprobar la imagen de fondo */
+  background: none;
+  mix-blend-mode: normal;
 }
 
 .content {

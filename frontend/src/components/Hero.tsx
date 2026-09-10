@@ -1,6 +1,7 @@
 import { HERO_PHOTO } from '../data/gallery';
+// Import directo de la imagen original como prueba rápida para evitar usar /public/gallery
+import testHero from '../assets/foto-portada.jpeg';
 import { hero, site } from '../data/content';
-import { fallbackSrc, srcSetFor } from '../lib/image';
 import { useScroll } from '../hooks/useScroll';
 import { FloatingDecor } from './FloatingDecor';
 import styles from './Hero.module.css';
@@ -16,9 +17,8 @@ export function Hero() {
       <div className={styles.bgWrap} style={{ transform: `translate3d(0, ${shift}px, 0)` }}>
         <img
           className={styles.bg}
-          src={fallbackSrc(HERO_PHOTO.slug, HERO_PHOTO.widths)}
-          srcSet={srcSetFor(HERO_PHOTO.slug, HERO_PHOTO.widths)}
-          sizes="100vw"
+          // Prueba: usar import directo para forzar carga desde src/assets
+          src={testHero}
           alt={HERO_PHOTO.alt}
           fetchPriority="high"
           decoding="async"

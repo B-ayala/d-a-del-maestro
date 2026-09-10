@@ -8,9 +8,9 @@ type GeneratedEntry = {
 
 const meta = generated as Record<string, GeneratedEntry>;
 
-// Foto del Hero: el plantel docente. No se reemplaza.
+// Foto del Hero: usar la imagen 'plantel-docente' (foto-portada).
 export const HERO_PHOTO = {
   slug: 'plantel-docente',
-  alt: 'El plantel docente del Instituto Armonía, reunido y sonriente frente al mural de flores del patio.',
+  alt: 'Foto del plantel docente del Instituto Armonía, reunido y sonriente.',
   ...(meta['plantel-docente'] as GeneratedEntry),
 } as const;

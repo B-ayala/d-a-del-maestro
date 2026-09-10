@@ -14,6 +14,7 @@ function App() {
   return (
     <>
       <Hero />
+
       <main>
         <Suspense fallback={<div style={{ minHeight: '100svh' }} aria-hidden="true" />}>
           <Experience />

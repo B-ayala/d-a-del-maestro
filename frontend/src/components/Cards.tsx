@@ -1,14 +1,22 @@
 import { useEffect, useRef, useState } from 'react';
 import { closing } from '../data/content';
-import { fallbackSrc, srcSetFor } from '../lib/image';
-import generated from '../data/gallery-generated.json';
 import styles from './Cards.module.css';
 
-// Cierre: la foto de Juanchi repetida en tarjetas, arriba del pie.
-const JUAN = (generated as Record<string, { widths: number[]; placeholder: string }>).juan;
-const JUAN_SLUG = 'juan';
+// Cargar todas las imágenes de `src/assets/juanchi` (renombradas a foto-1..)
+const imagesMap = import.meta.glob('../assets/juanchi/*.{jpeg,jpg,png,webp,svg}', { eager: true, as: 'url' }) as Record<string, string>;
+const JUANCHI_IMAGES = Object.entries(imagesMap)
+  .map(([p, url]) => ({ path: p, url }))
+  .sort((a, b) => {
+    const aNum = (a.path.match(/foto-(\d+)/i) || [])[1];
+    const bNum = (b.path.match(/foto-(\d+)/i) || [])[1];
+    if (aNum && bNum) return Number(aNum) - Number(bNum);
+    if (aNum) return -1;
+    if (bNum) return 1;
+    return a.url.localeCompare(b.url);
+  })
+  .map((x) => x.url);
 
-const CARD_COUNT = 8;
+const CARD_COUNT = JUANCHI_IMAGES.length || 8;
 const CAPTIONS = [
   'Un día para celebrar.',
   'Aprender jugando.',
@@ -22,19 +30,16 @@ const ALT = 'Juan, alumno del Instituto Armonía, disfrutando de un día al aire
 
 function Card({ index }: { index: number }) {
   const [loaded, setLoaded] = useState(false);
+  const img = JUANCHI_IMAGES[index % JUANCHI_IMAGES.length];
   return (
     <figure className={styles.card}>
-      <div className={styles.frame} style={{ backgroundImage: `url(${JUAN.placeholder})` }}>
+      <div className={styles.frame} style={{ backgroundImage: `url(${img})` }}>
         <img
           className={`${styles.img} ${loaded ? styles.loaded : ''}`}
-          src={fallbackSrc(JUAN_SLUG, JUAN.widths)}
-          srcSet={srcSetFor(JUAN_SLUG, JUAN.widths)}
-          sizes="(min-width: 900px) 30vw, (min-width: 560px) 45vw, 90vw"
+          src={img}
           alt={ALT}
           loading="lazy"
           decoding="async"
-          width={960}
-          height={1199}
           onLoad={() => setLoaded(true)}
         />
       </div>

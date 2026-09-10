@@ -18,8 +18,9 @@ const QUALITY = 72;
 
 // slug -> archivo original. El orden define el orden de la galería.
 const IMAGES = {
-  'plantel-docente': 'WhatsApp Image 2026-09-08 at 2.33.52 PM.jpeg',
-  juan: 'juanchi/juan.jpeg',
+  'plantel-docente': 'foto-portada.jpeg',
+  juan: 'juanchi/foto-1.jpeg',
+
 };
 
 function identify(file) {
